@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Structured Prediction for Language and Other Discrete Data | 11-763 | Overview </title>
+  <meta name="author" content="Chris Dyer" />    
+  <meta name="description" content="11-763 course page">
+
+  <link rel="shortcut icon" href="favicon.ico" />  
+  <link rel="start" href="/fa2015-11763" />
+
+  <link rel="stylesheet" type="text/css" href="css/min/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/min/960.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+  
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>  
+
+  
+</head>
+
+<body>
+  <div class="container_12 topmargin">
+  <div class="grid_3" id="info">
+    
+<h1 id='id2'><a href='/fa2015-11763' id='home'>Structured Prediction for Language and Other Discrete Data</a></h1>
+
+<h3 id='11763__fall_2015'>11-763 | Fall 2015</h3>
+
+<p><a href='#syllabus'><strong>Syllabus</strong></a> <br /> <a href='grading.html'><strong>Policy</strong></a> <br /> <strong>Homeworks</strong> <br /></p>
+
+<ul>
+<li><a href='hw1.html'>Homework 1</a></li>
+
+<li><a href='hw2.html'>Homework 2</a></li>
+
+<li><a href='hw3.html'>Homework 3</a></li>
+
+<li><a href='hw4.html'>Homework 4</a></li>
+
+<li><a href='hw5.html'>Homework 5</a></li>
+
+<li><a href='survey.html'>Survey Paper</a></li>
+</ul>
+
+  </div>
+  
+  <div class="grid_9">
+    <div class="grid_9 alpha omega">
+      <div class="">
+        <div id="page-content">
+          <h1 id='structured_prediction_for_language_and_other_discrete_data__11763__fall_2015'>Structured Prediction for Language and Other Discrete Data | 11-763 | Fall 2015</h1>
+
+<p><strong>Homework 1 is out</strong></p>
+
+<h2 id='at_a_glance'>At a Glance</h2>
+
+<ul>
+<li>Instructor: <a href='http://www.cs.cmu.edu/~cdyer'>Chris Dyer</a> : cdyer@cs.cmu.edu : GHC 5707 : By appointment</li>
+
+<li>TA: <a href='https://sites.google.com/site/kartikgoyy/'>Kartik Goyal</a> : kartikgo@cs.cmu.edu : GHC 5709 : Thursdays (4:30 to 5:30) or by appointment</li>
+
+<li>Location: <a href='http://www.cmu.edu/computing/class-event/classrooms/gates/4301.html'>GHC 4301</a></li>
+
+<li>Time: Tuesday/Thursday 3:00–4:20</li>
+
+<li>Textbook: Noah A. Smith, <a href='http://www.cs.cmu.edu/~nasmith/LSP/'><em>Linguistic Structure Prediction</em></a></li>
+</ul>
+
+<h2 id='syllabus'>Syllabus</h2>
+<table> 
+  <tbody>
+    <tr><th /><th><b>Date</b></th><th><b>Topic</b></th><th><b>Book</b></th><th><b>Further Readings</b></th>
+    </tr>
+
+    
+    
+    <tr>
+    <td>1</td>
+    <td>Sep 01
+    </td>
+    <td>
+      NO CLASS (LORELEI) <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>2</td>
+    <td>Sep 03
+    </td>
+    <td>
+      NO CLASS (LORELEI) <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>3</td>
+    <td>Sep 08
+    </td>
+    <td>
+      Introduction / HMM review <br />
+      
+      <a href='slides/intro.pdf'>[pdf]</a> <br />
+      
+      
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>4</td>
+    <td>Sep 10
+    </td>
+    <td>
+      Writing / HMM review 2 <br />
+      
+      <a href='slides/writing.pdf'>[pdf]</a> <br />
+      <a href='slides/hmm-review-1.pdf'>[pdf]</a> <br />
+      <a href='slides/hmm-review-2.pdf'>[pdf]</a> <br />
+      
+      
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>5</td>
+    <td>Sep 15
+    </td>
+    <td>
+      Sequence Labeling with the Structured Perceptron <br />
+      
+      <a href='slides/decoding-1.pdf'>[pdf]</a> <br />
+      
+      
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>7</td>
+    <td>Sep 17
+    </td>
+    <td>
+      Recitation / Questions (Kartik) <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>6</td>
+    <td>Sep 22
+    </td>
+    <td>
+      William Cohen Guest Lecture (EMNLP) <br />
+      <a href='slides/09-27-stacking+searn.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i><a href='http://curtis.ml.cmu.edu/w/courses/index.php/Class_Meeting_for_10-710_09-27-2011'>[readings]</a></i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>8</td>
+    <td>Sep 24
+    </td>
+    <td>
+      Decoding <br />
+      <a href='slides/decoding-2.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td><i>LSP</i> Ch. 2 </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>9</td>
+    <td>Sep 29
+    </td>
+    <td>
+      Parsing <br />
+      <a href='slides/cfparsing.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>10</td>
+    <td>Oct 01
+    </td>
+    <td>
+      Probability Distributions <br />
+      <a href='slides/probability.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>11</td>
+    <td>Oct 06
+    </td>
+    <td>
+      Soft Inference <br />
+      <a href='slides/depparsing.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td><i>LSP</i> Ch. 5 </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>12</td>
+    <td>Oct 08
+    </td>
+    <td>
+      Soft Inference 2 <br />
+      <a href='slides/softinference.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>13</td>
+    <td>Oct 13
+    </td>
+    <td>
+      MBR Decoding <br />
+      <a href='slides/mbr.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>14</td>
+    <td>Oct 15
+    </td>
+    <td>
+      Approximate Inference - Local Search and MCMC <br />
+      <a href='slides/random-search.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>15</td>
+    <td>Oct 20
+    </td>
+    <td>
+      Lagrangian Relaxation <br />
+      <a href='slides/lagrangian-relaxation.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>16</td>
+    <td>Oct 22
+    </td>
+    <td>
+      Conditional Random Fields <br />
+      <a href='slides/conditional-models.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td><i>LSP</i> Ch. 3.3 </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>17</td>
+    <td>Oct 27
+    </td>
+    <td>
+      Experimentation <br />
+      <a href='slides/experimentation.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>18</td>
+    <td>Oct 29
+    </td>
+    <td>
+      Empirical Risk Minimization <br />
+      <a href='slides/erm.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>19</td>
+    <td>Nov 03
+    </td>
+    <td>
+      Learning Generative Models <br />
+      <a href='slides/gen-learning1.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>20</td>
+    <td>Nov 05
+    </td>
+    <td>
+      Kartik Guest Lecture - Spectral Methods <br />
+      <a href='slides/spectral_slides.pdf'>[pdf]</a> <br />
+      <a href='suff_stat.py'>[demo]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>21</td>
+    <td>Nov 10
+    </td>
+    <td>
+      Expectation Maximization <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>22</td>
+    <td>Nov 12
+    </td>
+    <td>
+      Margin based learning with cost functions <br />
+      <a href='slides/ssvm.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>23</td>
+    <td>Nov 17
+    </td>
+    <td>
+      Neural Networks for structured prediction 1<br />
+      <a href='slides/neural1.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>24</td>
+    <td>Nov 19
+    </td>
+    <td>
+      Neural Networks for structured prediction 2<br />
+      <a href='slides/neural2.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>25</td>
+    <td>Nov 24
+    </td>
+    <td>
+      Unsupervised Learning with Features <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>26</td>
+    <td>Nov 26
+    </td>
+    <td>
+      THANKSGIVING <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>27</td>
+    <td>Dec 01
+    </td>
+    <td>
+      Edward Greffenstette guest lecture <br />
+      <a href='slides/HowMuchLinguistics2015.pdf'>[pdf]</a> <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>28</td>
+    <td>Dec 03
+    </td>
+    <td>
+      Peer paper review clinic <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>29</td>
+    <td>Dec 08
+    </td>
+    <td>
+      Neural sequence models - RNNs and LSTMs <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+    <tr>
+    <td>30</td>
+    <td>Dec 10
+    </td>
+    <td>
+      Neural Sequence Models - CTC <br />
+      
+    </td>
+    <td> <i>none</i> </td>
+    <td>
+      
+    </td>
+    </tr>
+    
+
+  </tbody>
+</table>
+        </div>
+    </div>
+    <div class="whitetable">
+      <p><table><tr><td><a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+      <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a></td><td>
+      Unless otherwise indicated, this content has been adapted from <a href="http://mt-class.org/">this course</a> by
+        <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"><a href="http://www.cs.cmu.edu/~cdyer">Chris Dyer</a><span>. Both the original and new content are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</td></tr></table>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        }
+      });
+    </script>
+  <!---->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37578735-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+

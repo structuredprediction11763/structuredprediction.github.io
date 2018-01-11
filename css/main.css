@@ -1,0 +1,332 @@
+@font-face {
+  font-family: 'Museo300';
+  src: url('type/museo_300_macroman/Museo300-Regular.otf');
+  src: url('type/museo_300_macroman/Museo300-Regular-webfont.eot?iefix') format('eot'),
+  url('type/museo_300_macroman/Museo300-Regular-webfont.woff') format('woff'),
+  url('type/museo_300_macroman/Museo300-Regular-webfont.ttf') format('truetype'),
+  url('type/museo_300_macroman/Museo300-Regular-webfont.svg#webfontBsA9EFUC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.topmargin {
+  margin-top: 7px;
+}
+
+#info img {
+  width: 180px;
+  border: 1px solid #0A0A0A;
+}
+
+body {
+  background-color: #FFFDFC;
+  color: #0A0A0A;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-size: 13px;
+}
+/* color scheme: http://colorschemedesigner.com/#3s21QvyQpw0w0 */
+a {
+  color: #0e9ce0;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  color: #ff8a04;
+}
+
+.abstract {
+  width: 80%;
+  margin-left: 20px;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: justify;
+}
+
+div.figure {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid #bbb;
+  margin-bottom: 19px;
+  padding-top: 13px;
+  width: 90%;
+}
+
+.figure h4 {
+  text-align: center;
+}
+
+.figure p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 11px;
+  line-height: 17px;
+}
+
+.figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+  border: 0px;
+}
+
+.references dt {
+  float:left;
+  padding: 0px;
+  margin-left: -19px;
+  margin-right: 19px;
+  clear:both;
+  position:relative;
+  text-align: right;
+  width: 7%;
+}
+
+.references dd {
+  float: left;
+  width: 93%;
+  margin-bottom: 19px;
+}
+
+
+/* projects styling */
+.projects img { /* Float any image to the RIGHT and give it some margin */
+  width: 31%;
+  font-size:1em;
+  float:right;
+  border: 0px solid #ccc;
+  margin-bottom:1.8em;
+  margin-left:2em;
+  margin-top:0.3em;
+}
+
+.projects ul {
+  list-style: none;
+  margin-left: -30px;
+}
+
+.projects li {
+  border-left: 1px solid #ccc;
+  padding-left: 19px;
+  border-radius: 3px;
+  margin-bottom: 19px;
+}
+
+.vision_lunch li {
+  list-style: bullet;
+  margin-left: 0px;
+}
+
+ul.inset {
+  list-style: none;
+  margin-left: -30px;
+}
+
+.inset li {
+  border-left: 1px solid #ccc;
+  padding-left: 19px;
+  margin-bottom: 9px;
+}
+
+.inset p {
+  display: inline;
+}
+
+/* vita styling */
+.vita p {
+  width: 460px;
+}
+
+.vita dt {
+  float:left;
+  width:80px;
+  padding: 0px;
+  margin-left: -19px;
+  margin-right: 19px;
+  clear:both;
+  position:relative;
+  text-align: right;
+}
+
+.vita dd {
+  float: left;
+  width: 460px;
+  margin-bottom: 19px;
+}
+
+.vita ul {
+  list-style: none;
+  margin-left: -19px;
+}
+
+.vita li {
+  width: 460px;
+  margin-left: 80px;
+  padding-left: 19px;
+  border-left: 1px solid #ccc;
+  margin-bottom: 19px;
+  border-radius: 3px;  
+}
+
+.vita h6 {
+  margin-left: 80px;
+}
+
+p {
+  line-height: 19px; /* 6px more than font-size */
+}
+
+pre,
+code {
+  font-family: 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+}
+
+hr {
+  border: 0 #ccc solid;
+  border-top-width: 1px;
+  clear: both;
+  height: 0;
+}
+
+h1 {
+  font-size: 21px;
+  font-family: "Museo300", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#navbar {
+  font-size: 21px;
+  font-family: "Museo300", Helvetica, Arial, sans-serif;
+  margin-bottom: 19px;
+}
+
+#navbar .small {
+  font-size: 13px;
+}
+
+h2 {
+  font-family: "Museo300", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 19px;
+}
+
+h3 {
+  font-family: "Museo300", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+h4 {
+  font-family: "Museo300", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+h5 {
+  font-family: "Museo300", Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+h6 { /* h6 is special... */
+  font-size: 15px;
+  line-height: 7px;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  margin-left: 30px;
+}
+
+#info ul {
+  list-style: circle;
+}
+
+#info li {
+  margin-left: 19px;
+}
+
+dl {
+  display: block;
+}
+
+table {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+td,th {
+  padding: 5px;
+  spacing: 0px;
+  border: 0px;
+}
+
+th {
+  background-color: lightgray;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background-color: #D2E9F7;
+}
+
+p,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+dl,
+dt,
+dd,
+pre,
+table,
+address,
+fieldset,
+figure {
+  margin-bottom: 19px;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px;
+}
+
+#footer {
+  padding-bottom: 2em;
+}
+
+.notfound {
+  font-size: 200%;
+  padding: 5em;
+}
+
+.centered {text-align: center;}
+.right {text-align: right;}
+
+acronym {
+  border-bottom: 1px dashed;
+}
+
+/* From typogridphy.css */
+img.left-img{ /* Float any image to the LEFT and give it some margin */
+  float:left;
+}
+img.right-img{ /* Float any image to the RIGHT and give it some margin */
+  float:right;
+}
